@@ -38,16 +38,13 @@
 
 		// 1 - C
 		const fifthListElement = document.querySelector('ul li:nth-child(5)');
-		fifthListElement.parentNode.style.border = '1px solid #000';
+		const elPai = fifthListElement.parentNode
+		
+		elPai.style.border = '1px solid #000';
 
 		// 1 - D
-		// Solucao com problema de interpretacao
-		const body = fifthListElement.parentNode.parentNode;
-		const childrenOfTheBody = body.querySelectorAll('div');
+		elPai.previousElementSibling.style.color = 'red';
 
-		childrenOfTheBody.forEach((div) => {
-			div.style.color = 'red';
-		});
 
 	</script>
 </body>
