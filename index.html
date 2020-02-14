@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Exercício PWEB@ - 14022020</title>
+</head>
+
+<body>
+	<div>Lista de alunos</div>
+	<ul>
+		<li>João</li>
+		<li>Maria</li>
+		<li>Sara</li>
+		<li>Edson</li>
+		<li>Mariana</li>
+		<li>Jose</li>
+		<li>Ana</li>
+	</ul>
+
+	<script>
+		// 1 - A
+		const firsListElement = document.querySelector('ul > li');
+		firsListElement.style.color = 'blue';
+
+		// 1 - B
+		const elementsList = document.querySelectorAll('ul *');
+		const thirdListElement = document.querySelector('ul li:nth-child(3)');
+		
+		for(let i=0; i<elementsList.length; i++) {
+			if (elementsList[i] == thirdListElement) {
+				break;
+			}
+			elementsList[i].style.fontWeight = 'bold';
+		}
+
+		// 1 - C
+		const fifthListElement = document.querySelector('ul li:nth-child(5)');
+		fifthListElement.parentNode.style.border = '1px solid #000';
+
+		// 1 - D
+		// Selecionar o elemento pai da lista? o body? Antes do body não tem div.
+
+		const body = fifthListElement.parentNode.parentNode;
+		const childrenOfTheBody = body.querySelectorAll('div');
+
+		childrenOfTheBody.forEach((div) => {
+			div.style.color = 'red';
+		});
+
+	</script>
+</body>
+
+</html>
