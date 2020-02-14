@@ -28,8 +28,8 @@
 		// 1 - B
 		const elementsList = document.querySelectorAll('ul *');
 		const thirdListElement = document.querySelector('ul li:nth-child(3)');
-		
-		for(let i=0; i<elementsList.length; i++) {
+
+		for (let i = 0; i < elementsList.length; i++) {
 			if (elementsList[i] == thirdListElement) {
 				break;
 			}
@@ -39,12 +39,28 @@
 		// 1 - C
 		const fifthListElement = document.querySelector('ul li:nth-child(5)');
 		const elPai = fifthListElement.parentNode
-		
+
 		elPai.style.border = '1px solid #000';
 
 		// 1 - D
-		elPai.previousElementSibling.style.color = 'red'; 
+		elPai.previousElementSibling.style.color = 'red';
 
+
+		// 2
+		const totalN = prompt('Digite um valor de linhas e colunas');
+		let table = "<table>";
+		if (!isNaN(totalN) && totalN > 0) {
+			for (let i = 0; i < array.length; i++) {
+				table += "<tr>";
+				for (let j = 0; j < array.length; j++) {
+					table += "<td>" + j + "</td>";
+				}
+				table += "</tr>";
+			}
+		}
+		table += "</table>";
+
+		document.body.innerHTML = table;
 
 	</script>
 </body>
