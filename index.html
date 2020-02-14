@@ -41,8 +41,7 @@
 		fifthListElement.parentNode.style.border = '1px solid #000';
 
 		// 1 - D
-		// Selecionar o elemento pai da lista? o body? Antes do body não tem div.
-
+		// Solucao com problema de interpretacao
 		const body = fifthListElement.parentNode.parentNode;
 		const childrenOfTheBody = body.querySelectorAll('div');
 
